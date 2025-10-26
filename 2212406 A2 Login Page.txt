@@ -1,0 +1,105 @@
+Name : Muhammad Rayyan Aamir	
+Reg No : 221206
+Assignment 02
+
+
+
+ANDROID LOGIN PROJECT (PACKAGE: com.example.loginpage)
+====================================================
+
+1. LOGIN PAGE (MainActivity.java)
+---------------------------------
+• Displays username and password input fields.
+• Contains Login and Reset buttons.
+• Includes "Register" and "Forgot Password" text links.
+• Validates credentials against saved data (from SharedPreferences).
+• If correct → navigates to HomeActivity (landing screen).
+• If incorrect → shows “Invalid username or password” message.
+• Reset button clears input fields and messages.
+
+---
+
+2. REGISTRATION PAGE (RegistrationActivity.java)
+------------------------------------------------
+• Allows users to create a new account.
+• Takes username and password as input.
+• Saves the entered credentials in SharedPreferences under file name “UserPrefs”.
+• Displays a success message after saving data.
+• Returns to login page automatically after registration.
+
+---
+
+3. FORGOT PASSWORD PAGE (ForgotPasswordActivity.java)
+-----------------------------------------------------
+• Used to navigate to the password reset page.
+• Provides a button to go to ResetPasswordActivity.
+• This page is just a helper navigation screen.
+
+---
+
+4. RESET PASSWORD PAGE (ResetPasswordActivity.java)
+---------------------------------------------------
+• Lets the user update their stored password.
+• Takes a new password input.
+• Saves it in SharedPreferences (replacing the old password).
+• Displays a confirmation message “Password updated successfully”.
+• Navigates back to login page after success.
+
+---
+
+5. HOME PAGE (HomeActivity.java)
+--------------------------------
+• Shown after a successful login.
+• Displays a simple welcome message with the logged-in username.
+• Has a Logout button that redirects back to login page.
+
+---
+
+6. DATA STORAGE (SharedPreferences)
+-----------------------------------
+• Used to store user credentials locally in the app.
+• File name: "UserPrefs".
+• Keys used: "username" and "password".
+• Default fallback credentials: username = "admin", password = "12345".
+
+---
+
+7. NAVIGATION (Intents)
+-----------------------
+• Login → HomeActivity (after successful login)
+• Login → RegistrationActivity (when Register clicked)
+• Login → ForgotPasswordActivity (when Forgot Password clicked)
+• ForgotPasswordActivity → ResetPasswordActivity
+• ResetPasswordActivity → MainActivity (after reset)
+• HomeActivity → MainActivity (on logout)
+
+---
+
+8. GRAPHICAL ELEMENTS
+---------------------
+• Logo image placed in res/drawable/logo.png.
+• Login screen uses ImageView to show app logo.
+• Buttons and textviews styled with modern, clean layout in XML.
+
+---
+
+9. HOW TO RUN
+-------------
+1. Open Android Studio → New Project → Empty Activity.
+2. Set package name: com.example.loginpage.
+3. Replace auto-generated files with the provided Java and XML files.
+4. Place logo.png in res/drawable/ folder.
+5. Run the app → Register a user → Login → Explore all screens.
+
+---
+
+10. SUMMARY
+-----------
+This project demonstrates basic Android login system functionalities:
+• Account creation (RegistrationActivity)
+• Authentication (MainActivity)
+• Password recovery (ResetPasswordActivity)
+• Data persistence (SharedPreferences)
+• Navigation using Intents
+• Modern and simple UI layout
+
